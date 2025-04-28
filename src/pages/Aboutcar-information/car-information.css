@@ -1,0 +1,91 @@
+.Carinformation-container{
+    max-width: 100%;
+    justify-content: center;
+    justify-items: center;
+    margin: 0%;
+    padding: 0%;
+}
+
+.herosection-carinfomation{
+    display: flex;
+    width: 100%;
+    justify-content:space-evenly;
+    justify-items: center;
+
+}
+
+.car-information-image,
+.car-information-firstpara{
+    display: flex;
+    white-space: nowrap;
+    justify-content: center;
+        flex-direction: column;
+        align-items: center;
+}
+
+.quote-container {
+    text-align: center;
+    margin-top: -40px;
+    margin-left: 90px;
+   
+}
+
+.blinking-button {
+    text-decoration: underline;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    animation: blink 1.5s infinite;
+    background-color: #007bff;
+    max-width: 600px !important;
+    border-radius: 30px;
+    height: 45px;
+    display: inline-block;
+    /* Ensures width and height are applied */
+    text-align: center;
+    /* Centers the text horizontally */
+    line-height: 50px;
+    /* Vertically centers the text inside the button */
+    padding: 0 20px;
+    /* Adds padding to the sides */
+    box-sizing: border-box;
+    /* Ensures padding is included in the width */
+
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.backgroundsection-carinformation{
+   width:100%;
+   background: linear-gradient(to bottom, #4297D8, #175A9E);
+   height: 300px;
+}
+
+.bacground-sec-heading{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-size: 22px;
+    font-weight: bold;
+      
+}
+
+.carimages-carinformation-screen{
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+
+}

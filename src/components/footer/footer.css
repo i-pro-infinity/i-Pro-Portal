@@ -1,0 +1,124 @@
+.footer {
+    background-color: #4297D8;
+    color: white;
+    text-align: center;
+    padding: 20px 15px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-text {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footer-text a {
+    color: #FFA500;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+    color: #FFD700;
+}
+
+.disclaimer {
+    font-size: 13px;
+    font-style: italic;
+    color: #D0D0D0;
+}
+
+/* Divider */
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background: #FFA500;
+    margin: 10px auto;
+    width: 85%;
+}
+
+/* Footer Links */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 13px;
+    border: 1px solid #FFA500;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.footer-links a:hover {
+    background-color: #FFA500;
+    color: #002855;
+}
+
+/* Copyright */
+.footer-copyright {
+    font-size: 12px;
+    color: #B0B0B0;
+    margin-top: 10px;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.whatsapp-float img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.whatsapp-tooltip {
+    background: white;
+    color: black;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-text {
+        font-size: 12px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links a {
+        width: 90%;
+        text-align: center;
+    }
+
+    .whatsapp-float {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .whatsapp-tooltip {
+        display: none;
+    }
+}

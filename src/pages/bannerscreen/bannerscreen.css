@@ -1,0 +1,106 @@
+.banner-screen-container{
+    max-width: 100%;
+    align-items: center;
+    max-width: auto;
+    max-width: auto;
+    margin: auto;
+    padding:0;
+}
+
+.hero-section-bannerscreen{
+    display: flex;
+   
+    justify-content: space-evenly;
+    width:100%;
+}
+
+.first-section,
+.second-section{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 30px;
+    justify-content: space-evenly;
+}
+
+.car-section{
+    display:flex;
+    align-items: center;
+    width:600px;
+    height: 500px;
+   
+    margin-top: 20px;
+
+}
+
+.car-image{
+    display: flex;
+    align-items: center;
+    width:650px;
+    height:350px;
+   
+    margin-top: 20px;
+}
+
+.cloud-section{
+    display: flex;
+    align-items: center;
+    width: 600px;
+    height: 300px;
+   
+    margin-top: 10px;
+}
+
+.cloud-section {
+    background-image: url('/src/assets/ChatGPT\ Image\ Apr\ 16\,\ 2025\,\ 12_35_32\ PM\ 1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 300px;
+    width: 600px;
+  
+   
+    align-items: left;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cloud-content-section {
+    
+    /* optional dark overlay */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.main-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.subtext {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.icon-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 20px;
+}
+
+.heart-hand {
+    display: flex;
+    align-items: center;
+}
+
+
+
