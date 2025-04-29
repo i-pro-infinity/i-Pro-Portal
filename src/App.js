@@ -12,8 +12,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LandingScreen />} />
-        <Route path="/Banner-screen" element={<Bannerscreen />} />
+        <Route path="/landing-screen" element={<LandingScreen />} />
+        <Route path="/" element={<Bannerscreen />} />
         <Route path="/footer" element={<Footer />} />
         <Route path="/Aboutus" element={<AboutIPro />} />
         <Route path="/4-wheeler" element={<Carinformation />} />

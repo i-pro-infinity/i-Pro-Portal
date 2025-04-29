@@ -9,11 +9,27 @@
 
 .hero-section-bannerscreen{
     display: flex;
-   
+    
     justify-content: space-evenly;
     width:100%;
 }
 
+.first-section{
+    flex:1;
+}
+
+.main-banner-container{
+    margin-left: 80px;
+    z-index: 10;
+    position: relative;
+}
+
+.bannerscreen-header{
+    z-index: 10;
+        position: relative;
+        color: #007BC1;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
 .first-section,
 .second-section{
     display: flex;
@@ -22,43 +38,144 @@
     justify-content: space-evenly;
 }
 
-.car-section{
-    display:flex;
-    align-items: center;
-    width:600px;
-    height: 500px;
-   
-    margin-top: 20px;
-
-}
-
-.car-image{
+.banner-section {
     display: flex;
     align-items: center;
-    width:650px;
-    height:350px;
-   
-    margin-top: 20px;
+    justify-content: center;
+    width: 800px;
+    height: 600px;
+    margin-top: -100px;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
 }
 
+.banner-image {
+    width: 800px;
+    height: 450px;
+    margin-top: -60px;
+    margin-left: -60px;
+    object-fit: contain;
+    transition: transform 0.5s ease-in-out;
+}
+
+.banner-image.zoom {
+    transform: scale(1.1);
+}
+
+.banner-inside-text{
+    position: absolute;
+    top: 47%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: black;
+    /* Or any contrasting color */
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    
+    /* Optional background for better readability */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 25%;
+}
+.banner-text {
+    position: absolute;
+    bottom: 144px;
+    /* Adjust this to match the blue box */
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    width: 90%;
+    
+    max-width: 700px;
+    line-height: 1.5;
+    left:40%;
+   
+    transform: translateX(-50%);
+    z-index: 2;
+    
+}
 .cloud-section{
     display: flex;
     align-items: center;
     width: 600px;
-    height: 300px;
-   
+    height: 350px;
+    position: relative;
+        z-index: 5;
     margin-top: 10px;
 }
+.arrow-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    /* Full width container for the arrows */
+    margin-top: 20px;
+    /* Space between the text and arrows */
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    cursor: pointer;
+}
+
+.left-arrow {
+    border-bottom: 20px solid #007BC1;
+    /* Blue color for left arrows */
+    transform: rotate(180deg);
+    /* Rotate the arrow to point left */
+}
+
+.right-arrow {
+    border-bottom: 20px solid #007BC1;
+    /* Blue color for right arrows */
+    transform: rotate(0deg);
+    /* No rotation for right arrows */
+}
+
+
+.iconss-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 25px;
+gap: 20px;
+  position: relative;
+  z-index: 10;
+
+}
+
+
+.iconss {
+    font-size: 30px;
+    color: #007BC1;
+    /* Color of the icons */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+     z-index: 10;
+    position: relative;
+    margin: 0 10px;
+    
+}
+
+.iconss:hover {
+    transform: scale(1.1);
+    /* Slightly enlarge icons on hover */
+}
+
 
 .cloud-section {
-    background-image: url('/src/assets/ChatGPT\ Image\ Apr\ 16\,\ 2025\,\ 12_35_32\ PM\ 1.png');
-    background-size: cover;
+    background-image: url('/src/assets/cloud-image.png');
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
-    height: 300px;
+    height: 400px;
     width: 600px;
-  
-   
+    margin-top: 60px;
+    margin-left: -30%;
     align-items: left;
     justify-content: center;
     color: white;
@@ -68,29 +185,32 @@
     overflow: hidden;
 }
 
-.cloud-content-section {
-    
-    /* optional dark overlay */
-    padding: 20px;
-    border-radius: 8px;
+.cloud-content-section { 
+  margin-top: -150px;
+  margin-left: -200px;
 }
 
 .main-title {
-    font-size: 28px;
+    font-size: 20px;
     font-weight: bold;
+    color: black;
 }
 
 .subtitle {
-    font-size: 20px;
-    margin: 5px 0;
+    font-size: 18px;
+    margin: 1px 0;
+    color: #007BC1;
+    text-shadow: black;
 }
 
 .subtext {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #007BC1;
+    font-weight: bold;
 }
 
-.icon-row {
+.iconss-row {
     display: flex;
     justify-content: center;
     gap: 15px;

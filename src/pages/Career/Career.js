@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../../components/Header/header';
-import careerimage from '../../assets/carrerimage.png'
+import careerimage from '../../assets/career-image.jpg'
 import './Career.css'
 
     const CareerPage = () => {

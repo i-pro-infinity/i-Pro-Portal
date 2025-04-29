@@ -30,6 +30,8 @@
 }
 
 
+
+
 .herosection-landingscreen {
     display: flex;
     justify-content: space-evenly;
@@ -56,6 +58,9 @@
 }
 
 }
+
+
+
 
 
 /* Left and right sections */
@@ -98,6 +103,8 @@
     }
 }
 
+
+
 @media (max-width: 1024px) {
     .landingscreen-grid {
         display: grid;
@@ -107,6 +114,8 @@
 
     }
 }
+
+
 .i-pro-heading{
     font-size: 18px;
     color: white;
@@ -144,7 +153,8 @@
 }
 
 @media (max-width: 1024px) {
-.grid-box {position: relative;
+.grid-box {
+    position: relative;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -160,6 +170,9 @@
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 }
+
+
+ 
 .info-icon {
     position: absolute;
     top: 6px;
