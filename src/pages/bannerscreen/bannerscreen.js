@@ -8,6 +8,7 @@ import health from '../../assets/health-banners.jpeg';
 import heart from '../../assets/Heart.png';
 import cloudimage from '../../assets/ChatGPT Image Apr 16, 2025, 12_35_32 PM 1.png';
 import Footer from "../../components/footer/footer";
+import { useNavigate } from 'react-router-dom';
 import "./bannerscreen.css";
 
 function Bannerscreen() {
@@ -20,6 +21,16 @@ function Bannerscreen() {
     "Commercial Vehicle Insurance – Take a commercial vehicle insurance in a few simple steps",
     "Health Insurance – Take a health insurance policy in a few simple steps"
   ];
+
+  const bannerLinks = [
+    "https://uatweb.iproinfinity.com/bike-insurance/", // Car
+    "https://uatweb.iproinfinity.com/bike-insurance/", // Bike
+    "https://uatweb.iproinfinity.com/commercial-vehicle-insurance/#/", // Commercial
+    "https://uatweb.iproinfinity.com/health-insurance/#/" // Health
+  ];
+
+  const navigate = useNavigate();
+
   const [isHovered, setIsHovered] = useState(false);
   const intervalRef = useRef(null);
 
@@ -62,11 +73,14 @@ function Bannerscreen() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <img
-              src={images[imageIndex]} // Dynamically change image based on index
-              alt="vehicle"
-              className={`banner-image ${isHovered ? 'zoom' : ''}`}
-            />
+              <a href={bannerLinks[imageIndex]} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={images[imageIndex]}
+                  alt="vehicle"
+                  className={`banner-image ${isHovered ? 'zoom' : ''}`}
+                  style={{ cursor: 'pointer' }}
+                />
+              </a>
               <div className="banner-inside-text">
                 {bannerTexts[imageIndex]}
               </div>
@@ -91,10 +105,10 @@ function Bannerscreen() {
               </div>
 
               <div className='icon-container'>
-                <i className="fas fa-car iconss"></i>
-                <i className="fas fa-motorcycle iconss"></i>
-                <i className="fas fa-bus iconss"></i>
-                <i className="fas fa-hand-holding-heart iconss"></i>
+                <i className="fas fa-car iconss" onClick={() => navigate('/landing-screen')} style={{ cursor: 'pointer' }}></i>
+                <i className="fas fa-motorcycle iconss" onClick={() => navigate('/landing-screen')} style={{ cursor: 'pointer' }}></i>
+                <i className="fas fa-bus iconss" onClick={() => navigate('/landing-screen')} style={{ cursor: 'pointer' }}></i>
+                <i className="fas fa-hand-holding-heart iconss" onClick={() => navigate('/landing-screen')} style={{ cursor: 'pointer' }}></i>
               </div>
 
 
