@@ -2,21 +2,27 @@ import React from 'react';
 import { FaCheckCircle } from "react-icons/fa";
 import Header from "../../components/Header/header";
 import Footer from "../../components/footer/footer";
-// import ourservicescreenimg from "../../../src/images/City Businessman.gif";
-// import time24hrs from "../../../src/images/time24hrs.png";
-// import customerinterview from "../../../src/images/Customer Interview Animation - Free Download Business Animations _ IconScout 1.png"
-
+import ourservicescreenimg from "../../assets/City Businessman.gif";
+import time24hrs from "../../assets/time24hrs.png";
+import customerinterview from "../../assets/Customer Interview Animation - Free Download Business Animations _ IconScout 1.png"
+import businessmeeting from "../../assets/businessmeeting.jpg";
+import business1 from "../../assets/business1.jpg";
+import business2 from "../../assets/business2.jpg";
+import business3 from "../../assets/business3.jpg";
+import business4 from "../../assets/businesss4.jpg";
+import timedifferent from "../../assets/timedifferent.jpg";
+import timedifferent2 from "../../assets/timedifferent2.jpg";
 import './our-service.css';
 
 const OurServices = () => {
     const cardData = [
         {
-           // img: business1,
+            img: business1,
             text: `Whichever industry or business you operate in, with our experience, 
             we can source the best and optimal insurance covers fit for your business needs.`
         },
         {
-            //img: business2,
+            img: business2,
             text: `We appreciate that different industries face varied challenges and risks, 
             and our insurance experts are ready to assess your particular requirements. 
             We work with your business to keep well-detailed business and employee records, 
@@ -24,13 +30,13 @@ const OurServices = () => {
             align with your needs.`
         },
         {
-            //img: business3,
+            img: business3,
             text: `Our detailed insights into solutions, costs, coverage, and other relevant 
             information ensure you are informed. We arrange a consultation session with you 
             to explain our proposal so you can make informed decisions on how to proceed.`
         },
         {
-            //img: business4,
+            img: business4,
             text: `From simple retail insurance to a major home, health to complex coverage 
             solutions such as property, materials, transportation, and organization, our 
             experience and expertise ensure we identify the right insurance covers for your 
@@ -66,13 +72,13 @@ const OurServices = () => {
                     </ul>
                 </div>
                 <div className='business-philosophy-img-container'>
-                    
+                    <img src={ourservicescreenimg} alt="Insurance Expert" className='business-philosophy-img' />
                 </div>
             </section>
 
             <section className='personal-insurance-container'>
                 <div className='personal-insurance-img-container'>
-                    
+                    <img src={time24hrs} alt="Insurance Expert" className='personal-insurance-img' />
                 </div>
                 <div className='personal-insurance-content'>
                     <h1 className='personal-insurance-heading'>
@@ -91,13 +97,13 @@ const OurServices = () => {
                         and operations, allowing you to focus on growth and success. Whether you’re a small business or a large corporation, we offer tailored insurance packages to meet your specific needs.</p>
                 </div>
                 <div className='corporate-insurance-img-container'>
-                    {/* <img src={customerinterview} alt="Insurance Expert" className='corporate-insurance-img' /> */}
+                    <img src={customerinterview} alt="Insurance Expert" className='corporate-insurance-img' />
                 </div>
             </section>
 
             <section className='insurance-broker-container'>
                 <div className='insurance-broker-img-container'>
-                    
+                    <img src={businessmeeting} alt="Insurance Expert" className='insurance-broker-img' />
                 </div>
                 <div className='insurance-broker-content'>
                     <h1 className='insurance-broker-heading'>
@@ -112,7 +118,7 @@ const OurServices = () => {
                 <div className="business-cards">
                     {cardData.map((card, index) => (
                         <div className="business-card" key={index}>
-                           
+                            <img src={card.img} alt={`Business Info ${index + 1}`} className="business-img" />
                             <p className="business-text">{card.text}</p>
                         </div>
                     ))}
@@ -124,7 +130,7 @@ const OurServices = () => {
                 <div className="ipro-content">
                     <div className="ipro-card">
                         <h3 className="ipro-subtitle">QUITE SIMPLY, THE PEOPLE</h3>
-                        
+                        <img src={timedifferent} alt="People" className="ipro-img" />
                         <p className="ipro-text">
                             We recruit and retain talented, committed and motivated individuals that share our
                             vision for providing safe and regulated support throughout our engagement with each
@@ -134,7 +140,7 @@ const OurServices = () => {
                     </div>
                     <div className="ipro-card">
                         <h3 className="ipro-subtitle">CLAIMS FOCUS</h3>
-                        
+                        <img src={timedifferent2} alt="Claims" className="ipro-img" />
                         <p className="ipro-text">
                             The unfortunate point at which you have to make a claim on your insurance is sometimes
                             called the moment of truth, as an acid test for your insurance coverage. It is the moment

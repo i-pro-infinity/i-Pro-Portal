@@ -1,6 +1,6 @@
 import React from 'react';
 import Headers from "../../components/Header/header";
-import Profile from "../../assets/ChatGPT Image Apr 16, 2025, 12_35_32 PM 1.png"
+import Profile from "../../assets/profile.jpg"
 import Footer from "../../components/footer/footer";
 
 import './About.css';
@@ -22,14 +22,14 @@ const AboutIPro = () => {
                         pursuit of excellence and a commitment to pushing the boundaries of what's possible.</p>
                 </div>
                 <div className='about-ipro-img-container'>
-                    {/* <img src={Profile} alt="Insurance Expert" className='about-ipro-img' /> */}
+                    <img src={Profile} alt="Insurance Expert" className='about-ipro-img' />
                 </div>
             </section>
 
 
             <section className='our-teams-container'>
                 <div className='our-teams-img-container'>
-                    {/* <img src={Profile} alt="Insurance Expert" className='our-teams-img' /> */}
+                    <img src={Profile} alt="Insurance Expert" className='our-teams-img' />
                 </div>
                 <div className='our-teams-content'>
                     <h1 className='our-teams-heading'>
@@ -54,13 +54,13 @@ const AboutIPro = () => {
                         and risk manager and across all lines of business and functions – Underwriting, Claims, Reinsurance and Risk Engineering.</p>
                 </div>
                 <div className='suresh-img-container'>
-                    {/* <img src={Profile} alt="Insurance Expert" className='suresh-img' /> */}
+                    <img src={Profile} alt="Insurance Expert" className='suresh-img' />
                 </div>
             </section>
 
             <section className='umesh-container'>
                 <div className='umesh-img-container'>
-                    {/* <img src={Profile} alt="Insurance Expert" className='umesh-img' /> */}
+                    <img src={Profile} alt="Insurance Expert" className='umesh-img' />
                 </div>
                 <div className='umesh-content'>
                     <h1 className='umesh-heading'>
@@ -84,7 +84,7 @@ const AboutIPro = () => {
                         Regional Manager, Calicut. Heads Claims and Personal Insurance Team.</p>
                 </div>
                 <div className='padmanabh-img-container'>
-                    {/* <img src={Profile} alt="Insurance Expert" className='padmanabh-img' /> */}
+                    <img src={Profile} alt="Insurance Expert" className='padmanabh-img' />
                 </div>
             </section>
             <div className="footer">

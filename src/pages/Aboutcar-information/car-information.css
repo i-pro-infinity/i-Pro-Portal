@@ -25,6 +25,43 @@
 .car-image{
     width:85%
 }
+
+@media (max-width: 768px) {
+    .car-image {
+            width: 85% !important;
+        }
+}
+
+
+@media (max-width: 768px) {
+    .car-information-image{
+        max-width: 80% !important;
+        margin-right: -20%;
+    }
+}
+
+
+@media (max-width: 768px) {
+.private-car-insurance-heading{
+    width:50%;
+    margin-left: 20%;
+
+}
+}
+
+@media (max-width: 768px) {
+.private-car-paragraph{
+    width: 50%;
+    margin-left: 20%;
+}
+}
+
+@media (max-width: 768px) {
+    .car-image {
+            width: 85% !important;
+            margin-left: 20%;
+        }
+}
 .quote-container {
     text-align: center;
     margin-top: -40px;
@@ -70,19 +107,95 @@
 }
 
 
-.backgroundsection-carinformation{
-   width:100%;
-   background: linear-gradient(to bottom, #4297D8, #175A9E);
-   height: 300px;
+@media (max-width: 1024px) {
+    .blinking-button {
+            text-decoration: underline;
+            margin-top: 30%;
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+            animation: blink 1.5s infinite;
+            background-color: #007bff;
+            max-width: 500px !important;
+            border-radius: 30px;
+            height: 40px;
+            display: inline-block;
+            /* Ensures width and height are applied */
+            text-align: center;
+            /* Centers the text horizontally */
+            line-height: 50px;
+            /* Vertically centers the text inside the button */
+            padding: 0 20px;
+            /* Adds padding to the sides */
+            box-sizing: border-box;
+            /* Ensures padding is included in the width */
+    
+        }
+    
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+    
+            50% {
+                opacity: 0;
+            }
+    
+            100% {
+                opacity: 1;
+            }
+        }
 }
 
-.bacground-sec-heading{
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    font-size: 22px;
+.backgroundsection-carinformation {
+    background: linear-gradient(to right, #4297D8,
+        #175A9E);
+    padding: 30px 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+        margin: auto;
+}
+
+.bacground-sec-heading {
+    text-align: center;
+    font-size: 20px;
     font-weight: bold;
-      
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.carinfo-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.carinfo-section {
+    background: #ffffff;
+    color: #000;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 45%;
+    min-width: 300px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carinfo-image {
+    width: 80px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carinfo-section p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 .carimages-carinformation-screen{
@@ -90,4 +203,106 @@
     justify-content: space-evenly;
     justify-items: center;
 
+}
+
+@media (max-width: 480px) {
+    .herosection-carinfomation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .car-information-image {
+        max-width: 90% !important;
+        margin: 0 auto;
+    }
+
+    .car-image {
+        width: 100% !important;
+        margin: 0 auto;
+    }
+
+    .car-information-firstpara {
+        width: 90%;
+        padding: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .private-car-insurance-heading {
+        font-size: 18px;
+        width: 100%;
+        margin: 0 auto 10px;
+    }
+
+    .private-car-paragraph {
+        font-size: 14px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .quote-container {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .blinking-button {
+        max-width: 90% !important;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+
+    .backgroundsection-carinformation {
+        padding: 20px 10px;
+    }
+
+    .bacground-sec-heading {
+        font-size: 18px;
+    }
+
+    .carinfo-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .carinfo-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .carinfo-image {
+        width: 60px;
+    }
+
+    .coverage-title {
+        font-size: 18px;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .coverage-grid-section2 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .coverage-item {
+        width: 90%;
+        text-align: center;
+    }
+
+    .coverage-item img {
+        width: 60px;
+        height: auto;
+    }
+
+    .coverage-text h3 {
+        font-size: 16px;
+    }
+
+    .coverage-text p {
+        font-size: 14px;
+    }
 }

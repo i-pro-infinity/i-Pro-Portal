@@ -3,6 +3,7 @@ import Header from "../../components/Header/header";
 import landingimage from "../../assets/landingscreen-image.jpeg";
 import bluecar from "../../assets/Blue car (2).png";
 import scooter from "../../assets/Scooter.png";
+import { Link } from 'react-router-dom';
 import commercial from "../../assets/Truck.png";
 import handsonheart from "../../assets/handsonhearts.png";
 import travel from "../../assets/Airplane Take Off.png";
@@ -24,6 +25,20 @@ function LandingScreen () {
         navigate('/4-wheeler');  // Navigate to the /4-wheeler screen
     };
 
+    const handleClick2wheeler = () => {
+        navigate('/2-wheeler');
+    }
+
+    const handleClickcommercial = () => {
+        navigate('/commercial-insurance');
+    }
+
+    const handleClickhealth = () => {
+        navigate('/healthinsurance');
+    }
+
+    
+
     return (
    <div className="Landingscreen-container">
         <div className="header-section-for-landingpage">
@@ -31,7 +46,6 @@ function LandingScreen () {
                 
         </div>
             <div className='landing-screen-background'> </div>
-            
             <div className="herosection-landingscreen">
             <div className="section1-landingscreen">
                     <div className="i-proheading">
@@ -48,7 +62,7 @@ function LandingScreen () {
                                 onClick={() => window.open('https://uatweb.iproinfinity.com/carinsurance/', '_blank')}
                             >
                                 <img src={bluecar} alt="4 wheeler" className="icon-img" />
-                                <p>4 wheeler</p>
+                                <p className="grid-lable">4 wheeler</p>
                             </div>
 
                             <div className="info-icon" onClick={handleClick}><FaInfoCircle /></div>
@@ -58,56 +72,62 @@ function LandingScreen () {
                                 onClick={() => window.open('https://uatweb.iproinfinity.com/bike-insurance/', '_blank')}
                             >
                             <img src={scooter} alt="2 wheeler" className="icon-img" />
-                            <p>2 wheeler</p></div>
-                            <div className="info-icon"><FaInfoCircle /></div>
+                                <p className="grid-lable">2 wheeler</p></div>
+                            <div className="info-icon" onClick={handleClick2wheeler}><FaInfoCircle /></div>
                             </div>
                         <div className="grid-wrapper">
                         <div className="grid-box"
                                 onClick={() => window.open('https://uatweb.iproinfinity.com/commercial-vehicle-insurance/#/', '_blank')}
                         >
                         <img src={commercial} alt="4 wheeler" className="icon-img" />
-                                <p>Commercial Vehicle</p></div>
-                        <div className="info-icon"><FaInfoCircle /></div>
+                                <p className="grid-lable">Commercial Vehicle</p></div>
+                            <div className="info-icon" onClick={handleClickcommercial}><FaInfoCircle /></div>
                         </div>
                         <div className="grid-wrapper">
                         <div className="grid-box"
                                 onClick={() => window.open('https://uatweb.iproinfinity.com/healthinsurance/', '_blank')}
                                 >
                         <img src={handsonheart} alt="4 wheeler" className="icon-img" />
-                        <p>Health</p></div>
-                            <div className="info-icon"><FaInfoCircle /></div>
+                                <p className="grid-lable">Health</p></div>
+                            <div className="info-icon" onClick={handleClickhealth}><FaInfoCircle /></div>
                         </div>
                         <div className="grid-wrapper">
                         <div className="grid-box">
                         <img src={travel} alt="4 wheeler" className="icon-img" />
-                        <p>Travel</p></div>
+                                <p className="grid-lable">Travel</p></div>
                         <div className="info-icon"><FaInfoCircle /></div>
                         </div>
                         <div className="grid-wrapper">
                         <div className="grid-box">
                         <img src={corporate} alt="4 wheeler" className="icon-img" />
-                        <p>Corporate</p></div>
+                                <p className="grid-lable">Corporate</p></div>
                         <div className="info-icon"><FaInfoCircle /></div>
                         </div>
                         <div className="grid-wrapper">
                         <div className="grid-box">
                         <img src={homeloan} alt="4 wheeler" className="icon-img" />
-                        <p>Home Insurance</p></div>
+                                <p className="grid-lable">Home Insurance</p></div>
                             <div className="info-icon"><FaInfoCircle /></div>
                         </div>
                         <div className="grid-wrapper">
                         <div className="grid-box">
                         <img src={family} alt="4 wheeler" className="icon-img" />
-                        <p>Life Insurance</p>
+                                <p className="grid-lable">Life Insurance</p>
                         </div>
                         <div className="info-icon"><FaInfoCircle /></div>
                         </div>
             </div>
 
                     <div className="rectangle-box">
+                        <Link to="/under-process" className="link-no-style">
                         <img src={fLower} alt="decor" className="decor-icon" />
-                        <p>Check out the corporate insurance plan.</p>
+                        </Link>
+                        <Link to="/under-process" className="link-no-style">
+                        <p className="corporate-insurance-plan">Check out the corporate insurance plan.</p>
+                        </Link>
+                        <Link to="/under-process" className="link-no-style">
                         <img src={corporate} alt="icon" className="decor-icon" />
+                        </Link>
                     </div>
             </div>    
                 

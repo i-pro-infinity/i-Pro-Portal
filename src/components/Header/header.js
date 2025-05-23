@@ -55,19 +55,25 @@ const Header = () => {
                                     </MenuItem>
                                 )}
                                 <MenuItem onClick={handleMenuClose}>
-                                    <Link to="/about-us" className="menu-link">About Us</Link>
+                                    <Link to="/Aboutus" className="menu-link">About Us</Link>
                                 </MenuItem>
-                                <MenuItem onClick={handleMenuClose}>
+                                {/* <MenuItem onClick={handleMenuClose}>
                                     <Link to="#" className="menu-link">Products</Link>
-                                </MenuItem>
+                                </MenuItem> */}
                                 <MenuItem onClick={handleMenuClose}>
                                     <Link to="/our-services" className="menu-link">Services</Link>
                                 </MenuItem>
                                 <MenuItem onClick={handleMenuClose}>
-                                    <Link to="#" className="menu-link">Claims</Link>
+                                    <Link to="/beliefs-section" className="menu-link">Our Beliefs</Link>
                                 </MenuItem>
                                 <MenuItem onClick={handleMenuClose}>
-                                    <Link to="#" className="menu-link">Careers</Link>
+                                    <Link to="/why-ipro-infinty" className="menu-link">Why I-Pro Infinity</Link>
+                                </MenuItem>
+                                <MenuItem onClick={handleMenuClose}>
+                                    <Link to="/under-process" className="menu-link">Claims</Link>
+                                </MenuItem>
+                                <MenuItem onClick={handleMenuClose}>
+                                    <Link to="/career" className="menu-link">Careers</Link>
                                 </MenuItem>
                                 <MenuItem onClick={handleMenuClose}>
                                     <Link to="/contact-us" className="menu-link">Contact Us</Link>
@@ -84,14 +90,18 @@ const Header = () => {
                             <Button color="inherit">
                                     <Link to="/Aboutus" className="nav-link">About Us</Link>
                             </Button>
-                            <Button color="inherit">
-                                <Link to="#" className="nav-link">Products</Link>
-                            </Button>
+                            
                             <Button color="inherit">
                                 <Link to="/our-services" className="nav-link">Services</Link>
                             </Button>
+                                <Button color="inherit">
+                                    <Link to="/beliefs-section" className="nav-link">Our Beliefs</Link>
+                                </Button>
+                                <Button color="inherit">
+                                    <Link to="/why-ipro-infinty" className="nav-link">Why I-Pro Infinity</Link>
+                                </Button>
                             <Button color="inherit">
-                                <Link to="#" className="nav-link">Claims</Link>
+                                    <Link to="/under-process" className="nav-link">Claims</Link>
                             </Button>
                             <Button color="inherit">
                                     <Link to="/career" className="nav-link">Careers</Link>

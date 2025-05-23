@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Footer from "../../components/footer/footer"
 import './support.css';
-// import contactImg from '../../images/customersupport.gif'; // Top-left illustration
+import contactImg from '../../assets/customersupport.gif'; // Top-left illustration
 import Header from '../../components/Header/header';
-// import Calling from '../../images/calling.jpg'; // Support icon
-// import emailImg from '../../images/email.jpg'; // Email icon
-// import address from '../../images/addresss.jpg'; // WhatsApp icon
+ import Calling from '../../assets/calling.jpg'; // Support icon
+import emailImg from '../../assets/email.jpg'; // Email icon
+import address from '../../assets/addresss.jpg'; // WhatsApp icon
 
 const ContactUs = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -58,7 +58,7 @@ const ContactUs = () => {
       <br />
       <br />
       <div className="contact-headers">
-        {/* <img src={contactImg} alt="Contact Illustration" className="contact-img" /> */}
+        <img src={contactImg} alt="Contact Illustration" className="contact-img" />
         <div className="contact-form">
           <h2>Questions? Drop us a line!</h2>
           <form onSubmit={handleSubmit}>
@@ -81,21 +81,21 @@ const ContactUs = () => {
 
       <div className="contact-info">
         <div className="info-cards">
-          {/* <img className="calling" src={Calling} alt="Support" /> */}
-          <p>Contact Us!</p>
-          <p>080 25441353</p>
+          <img className="calling" src={Calling} alt="Support" />
+          <p className='contact-us'>Contact Us!</p>
+          <p className='contact-us'>080 25441353</p>
         </div>
 
         <div className="info-cards">
-          {/* <img className="emailimage" src={emailImg} alt="Email" /> */}
-          <p>Email</p>
-          <p>customerfirst@iproinfinity.com</p>
+          <img className="emailimage" src={emailImg} alt="Email" />
+          <p className='contact-us'>Email</p>
+          <p className='contact-us-email'>customerfirst@iproinfinity.com</p>
         </div>
 
         <div className="info-cards">
-          {/* <img className="addresss" src={address} alt="WhatsApp" /> */}
-          <p>Address</p>
-          <p>
+          <img className="addresss" src={address} alt="WhatsApp" />
+          <p className='contact-us'>Address</p>
+          <p className='contact-us'>
             # 18, 3rd Cross, RMV 2nd Stage<br />
             4th Block, MLA Layout,<br />
             Sanjaynagar, Bengaluru 560094

@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { Link } from 'react-router-dom';
 import Header from '../../components/Header/header';
-import Commercial from '../../assets/commercial vehicle.jpeg';
-import car from '../../assets/car-banner.png';
-import scooty from '../../assets/scooty-banner.png';
-import health from '../../assets/health-banners.jpeg';
+import Commercial from '../../assets/commercial-insurance-banner.png';
+import car from '../../assets/car-insurance-banner.png';
+import scooty from '../../assets/bike-insurance-banner.png';
+import health from '../../assets/health-insurance-banner.png';
 import heart from '../../assets/Heart.png';
 import cloudimage from '../../assets/ChatGPT Image Apr 16, 2025, 12_35_32 PM 1.png';
 import Footer from "../../components/footer/footer";
@@ -16,9 +17,9 @@ function Bannerscreen() {
   const [imageIndex, setImageIndex] = useState(0);
   const images = [car, scooty, Commercial, health]; // Array of images in the desired order
   const bannerTexts = [
-    "Car Insurance – Take a 4-wheeler insurance in a few simple steps",
+    "Car Insurance –Take a 4-wheeler insurance in a few simple steps",
     "Bike Insurance – Take a 2-wheeler insurance in a few simple steps",
-    "Commercial Vehicle Insurance – Take a commercial vehicle insurance in a few simple steps",
+    "Commercial Vehicle Insurance – Take a commercial insurance in a few steps",
     "Health Insurance – Take a health insurance policy in a few simple steps"
   ];
 
@@ -26,7 +27,7 @@ function Bannerscreen() {
     "https://uatweb.iproinfinity.com/bike-insurance/", // Car
     "https://uatweb.iproinfinity.com/bike-insurance/", // Bike
     "https://uatweb.iproinfinity.com/commercial-vehicle-insurance/#/", // Commercial
-    "https://uatweb.iproinfinity.com/health-insurance/#/" // Health
+    "https://uatweb.iproinfinity.com/healthinsurance/" // Health
   ];
 
   const navigate = useNavigate();
@@ -84,14 +85,24 @@ function Bannerscreen() {
               <div className="banner-inside-text">
                 {bannerTexts[imageIndex]}
               </div>
-              <div className="banner-text">
-                … A BUSINESS INITIATED BY A TEAM OF INSURANCE AND industry experts<br></br>
-                WITH DECADES OF EXPERIENCE …
-              </div>
+              
           </div>
         </div>
         </div>
         <div className='second-section'>
+          <div className="partner-container">
+            <a href="https://uatweb.iproinfinity.com/login.php" target="_blank" rel="noopener noreferrer" className="link-wrapper">
+              <div className="partner-login">
+                <h2 className="partner-login-heading">Partner-Login</h2>
+              </div>
+            </a>
+
+            <a href="https://uatweb.iproinfinity.com/pos/" target="_blank" rel="noopener noreferrer" className="link-wrapper">
+              <div className="partner-registration">
+                <h2 className="partner-login-heading">Partner-Registration</h2>
+              </div>
+            </a>
+          </div>
           <div className='cloud-section'>
             <div className='cloud-content-section'>
               <h1 className='main-title'>I-Pro Infinity</h1>
@@ -104,17 +115,27 @@ function Bannerscreen() {
                 <div className='arrow left-arrow'></div>
               </div>
 
-              <div className='icon-container'>
+              <div className='iconss-container'>
                 <i className="fas fa-car iconss" onClick={() => navigate('/landing-screen')} style={{ cursor: 'pointer' }}></i>
                 <i className="fas fa-motorcycle iconss" onClick={() => navigate('/landing-screen')} style={{ cursor: 'pointer' }}></i>
                 <i className="fas fa-bus iconss" onClick={() => navigate('/landing-screen')} style={{ cursor: 'pointer' }}></i>
                 <i className="fas fa-hand-holding-heart iconss" onClick={() => navigate('/landing-screen')} style={{ cursor: 'pointer' }}></i>
               </div>
-
-
-              
             </div>
+            
           </div>
+          <div className='personal-insurance'>
+            <Link to="/under-process" className="link-no-style">
+              <div className="personal-insurance-background">
+                <h1 className='commercial-insurance-bannerscreen'>Commercial Insurance</h1>
+              </div>
+            </Link>
+          </div>
+
+          
+
+
+         
         </div>
       </div>
       <Footer />
