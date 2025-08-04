@@ -2,16 +2,16 @@ import React from 'react';
 import { FaCheckCircle } from "react-icons/fa";
 import Header from "../../components/Header/header";
 import Footer from "../../components/footer/footer";
-import ourservicescreenimg from "../../assets/City Businessman.gif";
+import ourservicescreenimg from "../../assets/City Businessman11.png";
 import time24hrs from "../../assets/time24hrs.png";
-import customerinterview from "../../assets/Customer Interview Animation - Free Download Business Animations _ IconScout 1.png"
+import customerinterview from "../../assets/Customer Interview Animation - Free Download Business Animations _ IconScout 1.png.png"
 import businessmeeting from "../../assets/businessmeeting.jpg";
-import business1 from "../../assets/business1.jpg";
-import business2 from "../../assets/business2.jpg";
-import business3 from "../../assets/business3.jpg";
-import business4 from "../../assets/businesss4.jpg";
-import timedifferent from "../../assets/timedifferent.jpg";
-import timedifferent2 from "../../assets/timedifferent2.jpg";
+import business1 from "../../assets/business11.jpg (2).png";
+import business2 from "../../assets/business22.png";
+import business3 from "../../assets/business33.png";
+import business4 from "../../assets/business44.png";
+import timedifferent from "../../assets/timedifferent11.png";
+import timedifferent2 from "../../assets/timedifferent22.png";
 import './our-service.css';
 
 const OurServices = () => {
@@ -101,7 +101,7 @@ const OurServices = () => {
                 </div>
             </section>
 
-            <section className='insurance-broker-container'>
+            {/* <section className='insurance-broker-container'>
                 <div className='insurance-broker-img-container'>
                     <img src={businessmeeting} alt="Insurance Expert" className='insurance-broker-img' />
                 </div>
@@ -111,7 +111,7 @@ const OurServices = () => {
                     </h1>
                     <p className="insurance-broker-para">The world of insurance is complex and everchanging. The insurance covers provided by the policy you bought last year may no longer be suitable or sufficient for your needs. You may not know that the quoted premiums are competitive? And if you are just starting out or expanding your business, how do you know what types of insurance you need? And if the insurance you buy is good enough to protect your business against the risk exposures? A well experienced and suitably qualified professional can help assess and source the types and levels of cover that you need, saving you the trouble and effort. The consequences of not having the right insurance in place can be disastrous, and sometimes this only comes to light when you need to make a claim, which might be too late.</p>
                 </div>
-            </section>
+            </section> */}
 
             <div className="business-container">
                 <h2 className="business-title">WE UNDERSTAND YOUR BUSINESS</h2>

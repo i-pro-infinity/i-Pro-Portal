@@ -1,114 +1,200 @@
 import React from 'react';
-import { AppBar, Toolbar, IconButton, Menu, MenuItem, useMediaQuery, useTheme, Button } from '@mui/material';
+import {
+    AppBar,
+    Toolbar,
+    IconButton,
+    Menu,
+    MenuItem,
+    useMediaQuery,
+    useTheme,
+    Button,
+} from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../../assets/I-Pro logo with white BG (1).png';
+import logo from '../../assets/I-Pro-logo.png';
 import './header.css';
 
 const Header = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-    const [anchorEl, setAnchorEl] = React.useState(null);
     const location = useLocation();
 
-    const handleMenuClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
+    const [menuAnchor, setMenuAnchor] = React.useState(null);
+    const [whatWeDoAnchor, setWhatWeDoAnchor] = React.useState(null);
+    const [aboutUsAnchor, setAboutUsAnchor] = React.useState(null);
+    const [productsAnchor, setProductsAnchor] = React.useState(null);
+    const [partnersAnchor, setPartnersAnchor] = React.useState(null);
 
-    const handleMenuClose = () => {
-        setAnchorEl(null);
+    const handleOpen = setter => event => setter(event.currentTarget);
+    const handleClose = setter => () => setter(null);
+
+    // 🔧 Dropdown menu style
+    const menuPaperProps = {
+        sx: {
+            maxHeight: 'unset',
+            overflow: 'visible',
+            minWidth: 200,
+            paddingY: 0,
+            paddingX: 0,
+        }
     };
 
     return (
         <AppBar
             position="sticky"
-            className={`app-bar ${isMobile ? 'mobile' : ''}`} // Corrected template literal
-            sx={{ backgroundColor: isMobile ? '#097ABF' : 'transparent', boxShadow: 'none' }}
+            className={`app-bar ${isMobile ? 'mobile' : ''}`}
+            sx={{ backgroundColor: isMobile ? 'blue' : 'transparent', boxShadow: 'none' }}
         >
             <Toolbar className="toolbar">
-                {/* Logo Section */}
-                <img src={logo} alt="Logo" style={{ width: '160px', height: '40px', marginRight: '16px' }} />
+                <img src={logo} className="header-logo" alt="Logo" style={{ width: '160px', height: '120px', marginRight: '16px' }} />
 
-                {/* Menu items */}
                 <div className="menu-items">
                     {isMobile ? (
                         <>
-                            <IconButton color="inherit" onClick={handleMenuClick} className="hamburger-icon">
+                            <IconButton color="inherit" onClick={handleOpen(setMenuAnchor)} className="hamburger-icon">
                                 <MenuIcon />
                             </IconButton>
                             <Menu
-                                anchorEl={anchorEl}
-                                open={Boolean(anchorEl)}
-                                onClose={handleMenuClose}
-                                anchorOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'right',
-                                }}
-                                transformOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'right',
-                                }}
+                                anchorEl={menuAnchor}
+                                open={Boolean(menuAnchor)}
+                                onClose={handleClose(setMenuAnchor)}
+                                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                                transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+                                PaperProps={menuPaperProps}
                             >
-                                {location.pathname !== "/" && (
-                                    <MenuItem onClick={handleMenuClose}>
-                                        <Link to="/" className="menu-link">Home</Link>
-                                    </MenuItem>
-                                )}
-                                <MenuItem onClick={handleMenuClose}>
-                                    <Link to="/Aboutus" className="menu-link">About Us</Link>
+                                <MenuItem onClick={handleClose(setMenuAnchor)}><Link to="/our-services" className="menu-link">Our Services</Link></MenuItem>
+                                <MenuItem onClick={handleClose(setMenuAnchor)}><Link to="/why-ipro-infinty" className="menu-link">Why I-Pro Infinity</Link></MenuItem>
+                                <MenuItem onClick={handleClose(setMenuAnchor)}><Link to="/Aboutus" className="menu-link">About Us</Link></MenuItem>
+                                <MenuItem onClick={handleClose(setMenuAnchor)}><Link to="/beliefs-section" className="menu-link">Our Beliefs</Link></MenuItem>
+                                <MenuItem onClick={handleClose(setMenuAnchor)}><Link to="/healthinsurance" className="menu-link">Health Insurance</Link></MenuItem>
+                                <MenuItem onClick={handleClose(setMenuAnchor)}><Link to="/4-wheeler" className="menu-link">Private Car Insurance</Link></MenuItem>
+                                <MenuItem onClick={handleClose(setMenuAnchor)}><Link to="/2-wheeler" className="menu-link">Two-Wheeler Insurance</Link></MenuItem>
+                                <MenuItem onClick={handleClose(setMenuAnchor)}><Link to="/commercial-insurance" className="menu-link">Commercial Insurance</Link></MenuItem>
+                                <MenuItem onClick={handleClose(setMenuAnchor)}><Link to="/corporate" className="menu-link">Corporate Insurance</Link></MenuItem>
+                                <MenuItem onClick={handleClose(setMenuAnchor)}><Link to="/travelinsurance" className="menu-link">Travel Insurance</Link></MenuItem>
+                                <MenuItem onClick={handleClose(setMenuAnchor)}><Link to="/Lifeinsurance" className="menu-link">Life Insurance</Link></MenuItem>
+                                <MenuItem onClick={handleClose(setMenuAnchor)}><Link to="/Homeisnurance" className="menu-link">Home Insurance</Link></MenuItem>
+                                <MenuItem onClick={handleClose(setMenuAnchor)}><Link to="/career" className="menu-link">Careers</Link></MenuItem>
+                                <MenuItem onClick={handleClose(setMenuAnchor)}>
+                                    <a href="https://uatweb.iproinfinity.com/pos/" className="menu-link" target="_blank" rel="noopener noreferrer">Partner Registration</a>
                                 </MenuItem>
-                                {/* <MenuItem onClick={handleMenuClose}>
-                                    <Link to="#" className="menu-link">Products</Link>
-                                </MenuItem> */}
-                                <MenuItem onClick={handleMenuClose}>
-                                    <Link to="/our-services" className="menu-link">Services</Link>
-                                </MenuItem>
-                                <MenuItem onClick={handleMenuClose}>
-                                    <Link to="/beliefs-section" className="menu-link">Our Beliefs</Link>
-                                </MenuItem>
-                                <MenuItem onClick={handleMenuClose}>
-                                    <Link to="/why-ipro-infinty" className="menu-link">Why I-Pro Infinity</Link>
-                                </MenuItem>
-                                <MenuItem onClick={handleMenuClose}>
-                                    <Link to="/under-process" className="menu-link">Claims</Link>
-                                </MenuItem>
-                                <MenuItem onClick={handleMenuClose}>
-                                    <Link to="/career" className="menu-link">Careers</Link>
-                                </MenuItem>
-                                <MenuItem onClick={handleMenuClose}>
-                                    <Link to="/contact-us" className="menu-link">Contact Us</Link>
+                                <MenuItem onClick={handleClose(setMenuAnchor)}>
+                                    <a href="https://uatweb.iproinfinity.com/login.php" className="menu-link" target="_blank" rel="noopener noreferrer">Partner Login</a>
                                 </MenuItem>
                             </Menu>
                         </>
                     ) : (
                         <>
-                            {location.pathname !== "/" && (
-                                <Button color="inherit">
-                                    <Link to="/" className="nav-link">Home</Link>
-                                </Button>
-                            )}
-                            <Button color="inherit">
-                                    <Link to="/Aboutus" className="nav-link">About Us</Link>
+                            {/* What We Do */}
+                            <Button color="inherit" onClick={handleOpen(setWhatWeDoAnchor)}>
+                                <span className="nav-link">WHAT WE DO</span>
                             </Button>
-                            
-                            <Button color="inherit">
-                                <Link to="/our-services" className="nav-link">Services</Link>
+                                <Menu
+                                    anchorEl={whatWeDoAnchor}
+                                    open={Boolean(whatWeDoAnchor)}
+                                    onClose={handleClose(setWhatWeDoAnchor)}
+                                    anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                                    transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+                                    PaperProps={{
+                                        sx: {
+                                            height: '100px',
+                                            minWidth: 200,
+                                            overflow: 'hidden',
+                                            p: 0,
+                                            boxShadow: 3,
+                                        },
+                                    }}
+                                >
+                                    <MenuItem onClick={handleClose(setWhatWeDoAnchor)}>
+                                        <Link to="/our-services" className="menu-link">Our Services</Link>
+                                    </MenuItem>
+                                    <MenuItem onClick={handleClose(setWhatWeDoAnchor)}>
+                                        <Link to="/why-ipro-infinty" className="menu-link">Why I-Pro Infinity</Link>
+                                    </MenuItem>
+                                </Menu>
+
+
+                            {/* About Us */}
+                            <Button color="inherit" onClick={handleOpen(setAboutUsAnchor)}>
+                                <span className="nav-link">ABOUT US</span>
                             </Button>
-                                <Button color="inherit">
-                                    <Link to="/beliefs-section" className="nav-link">Our Beliefs</Link>
-                                </Button>
-                                <Button color="inherit">
-                                    <Link to="/why-ipro-infinty" className="nav-link">Why I-Pro Infinity</Link>
-                                </Button>
-                            <Button color="inherit">
-                                    <Link to="/under-process" className="nav-link">Claims</Link>
+                                <Menu
+                                    anchorEl={aboutUsAnchor}
+                                    open={Boolean(aboutUsAnchor)}
+                                    onClose={handleClose(setAboutUsAnchor)}
+                                    anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                                    transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+                                    PaperProps={{
+                                        sx: {
+                                            height: '100px',
+                                            minWidth: 200,
+                                            overflow: 'hidden',
+                                            p: 0,
+                                            boxShadow: 3,
+                                        },
+                                    }}
+                                >
+                                    <MenuItem onClick={handleClose(setAboutUsAnchor)}>
+                                        <Link to="/Aboutus" className="menu-link">About Us</Link>
+                                    </MenuItem>
+                                    <MenuItem onClick={handleClose(setAboutUsAnchor)}>
+                                        <Link to="/beliefs-section" className="menu-link">Our Beliefs</Link>
+                                    </MenuItem>
+                                </Menu>
+
+
+                            {/* Products */}
+                            <Button color="inherit" onClick={handleOpen(setProductsAnchor)}>
+                                <span className="nav-link">PRODUCTS</span>
                             </Button>
-                            <Button color="inherit">
-                                    <Link to="/career" className="nav-link">Careers</Link>
+                            <Menu
+                                anchorEl={productsAnchor}
+                                open={Boolean(productsAnchor)}
+                                onClose={handleClose(setProductsAnchor)}
+                                anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                                transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+                                PaperProps={menuPaperProps}
+                            >
+                                <MenuItem onClick={handleClose(setProductsAnchor)}><Link to="/healthinsurance" className="menu-link">Health Insurance</Link></MenuItem>
+                                <MenuItem onClick={handleClose(setProductsAnchor)}><Link to="/4-wheeler" className="menu-link">Private Car Insurance</Link></MenuItem>
+                                <MenuItem onClick={handleClose(setProductsAnchor)}><Link to="/2-wheeler" className="menu-link">Two-Wheeler Insurance</Link></MenuItem>
+                                <MenuItem onClick={handleClose(setProductsAnchor)}><Link to="/commercial-insurance" className="menu-link">Commercial Insurance</Link></MenuItem>
+                                <MenuItem onClick={handleClose(setProductsAnchor)}><Link to="/corporate" className="menu-link">Corporate Insurance</Link></MenuItem>
+                                <MenuItem onClick={handleClose(setProductsAnchor)}><Link to="/travelinsurance" className="menu-link">Travel Insurance</Link></MenuItem>
+                                <MenuItem onClick={handleClose(setProductsAnchor)}><Link to="/Lifeinsurance" className="menu-link">Life Insurance</Link></MenuItem>
+                                <MenuItem onClick={handleClose(setProductsAnchor)}><Link to="/Homeisnurance" className="menu-link">Home Insurance</Link></MenuItem>
+                            </Menu>
+
+                            {/* Careers */}
+                            <Button color="inherit"><Link to="/career" className="nav-link">CAREERS</Link></Button>
+
+                            {/* Partners */}
+                            <Button color="inherit" onClick={handleOpen(setPartnersAnchor)}>
+                                <span className="nav-link">PARTNERS</span>
                             </Button>
-                            <Button color="inherit">
-                                    <Link to="/contact-us" className="nav-link">Contact Us</Link>
-                            </Button>
+                            <Menu
+                                anchorEl={partnersAnchor}
+                                open={Boolean(partnersAnchor)}
+                                onClose={handleClose(setPartnersAnchor)}
+                                anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                                transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+                                    PaperProps={{
+                                        sx: {
+                                            height: '100px',
+                                            minWidth: 200,
+                                            overflow: 'hidden',
+                                            p: 0,
+                                            boxShadow: 3,
+                                        },
+                                    }}
+                            >
+                                <MenuItem onClick={handleClose(setPartnersAnchor)}>
+                                    <a href="https://uatweb.iproinfinity.com/pos/" className="menu-link" target="_blank" rel="noopener noreferrer">Partner Registration</a>
+                                </MenuItem>
+                                <MenuItem onClick={handleClose(setPartnersAnchor)}>
+                                    <a href="https://uatweb.iproinfinity.com/login.php" className="menu-link" target="_blank" rel="noopener noreferrer">Partner Login</a>
+                                </MenuItem>
+                            </Menu>
                         </>
                     )}
                 </div>

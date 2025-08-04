@@ -1,5 +1,17 @@
 .app-bar {
     background-color: white !important;
+    width: 100% !important;
+    position: sticky !important;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .logo {
@@ -19,6 +31,7 @@
 .menu-items {
     margin-left: auto;
     margin-right: 40px;
+    white-space: nowrap;
 }
 
 
@@ -49,7 +62,77 @@
     transition: width 0.3s ease-in-out;
 }
 
+.nav-link {
+    color: #007BC1;
+    text-decoration: none;
+    
+}
+
+.menu-link {
+    color: #007BC1;
+    text-decoration: none;
+}
+
+.nav-link:hover,
+.menu-link:hover {
+    color: #007BC1;
+    text-decoration: none;
+}
+
 /* Show the underline on hover */
 .menu-items .MuiButton-root:hover::after {
     width: 100%;
+}
+
+
+.css-1umw9bq-MuiSvgIcon-root {
+    fill: #007BC1 !important;
+    z-index: 10;
+}
+
+.hamburger-icon {
+    z-index: 9999;
+    color: #007BC1 !important;
+}
+
+
+.css-1toxriw-MuiList-root-MuiMenu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    padding-top: 8px;
+    padding-bottom: 8px;
+    outline: 0;
+    height: 400px;
+}
+
+.MuiMenu-paper {
+    margin-top: 0px !important;
+    /* 👈 Remove vertical gap */
+    margin-left: 0px !important;
+    /* 👈 Reset to default unless needed */
+    max-height: 300px !important;
+    width: 250px;
+    /* overflow-y: auto !important; */
+    position: absolute !important;
+    z-index: 1300 !important;
+    background-color: white !important;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 6px !important;
+}
+
+.header-logo{
+    width: 200px !important;
+    height: 60px !important;
+}
+
+/* Remove height and scroll from dropdowns */
+.menu-whatwedo .MuiPaper-root,
+.menu-aboutus .MuiPaper-root {
+    max-height: 50px;
+    overflow: visible !important;
+    padding: 0 !important;
+    min-width: 200px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
 }

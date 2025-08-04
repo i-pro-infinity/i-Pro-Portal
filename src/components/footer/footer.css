@@ -97,20 +97,101 @@
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
 }
 
+.footer-icon {
+    margin-right: 8px;
+    vertical-align: middle;
+    color: #FFA500;
+}
+
+/* Complaint link animation */
+.complaint-link {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.click-here-link {
+    color: #FFD700;
+    font-weight: bold;
+    text-decoration: underline;
+    animation: pulse 1.5s infinite;
+}
+
+.click-here-link:hover {
+    color: #fff700;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Footer Info Row */
+.footer-info-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: white;
+    flex-wrap: wrap;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .footer {
+        padding: 25px 10px;
+    }
+
     .footer-text {
         font-size: 12px;
+        line-height: 1.6;
     }
 
     .footer-links {
         flex-direction: column;
         align-items: center;
+        gap: 12px;
     }
 
     .footer-links a {
         width: 90%;
         text-align: center;
+    }
+
+    .footer-info-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .info-item {
+        font-size: 13px;
+        justify-content: center;
+    }
+
+    .disclaimer {
+        font-size: 12px;
+        text-align: justify;
     }
 
     .whatsapp-float {

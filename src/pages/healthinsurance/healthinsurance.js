@@ -11,7 +11,8 @@ import money from '../../assets/money.jpg'
 import plan from '../../assets/plan.jpg';
 import location from '../../assets/location.jpg'
 import healthisnurance4 from '../../assets/health-image4.png';
-import ZeroDepreciation from '../../assets/Zero Depreciation.png';
+import family from '../../assets/family.jpg';
+import senior from "../../assets/senior.jpg"
 import policy from '../../assets/policy.jpg'
 import commercialbus from '../../assets/commercial-bus.png';
 import healthinsurance from '../../assets/healthinsurance.png';
@@ -70,7 +71,16 @@ const TwoWheelerInsurance = () => {
                           for everyone, regardless of age or health status. A comprehensive health policy provides peace of mind 
                           during hospital stays by covering medical expenses.
                     </p>
-                    <button className="quote-btn">Get Quote</button>
+                    <div className="quote-container">
+                        <a
+                            href="https://uatweb.iproinfinity.com/healthinsurance/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="quotes-btn-health"
+                        >
+                            Get Quote
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -79,7 +89,7 @@ const TwoWheelerInsurance = () => {
                     <div className="coverage-card">
                         <h4>Financial Protection  Against High Medical Costs</h4>
                         <img src={healthinsurance1} alt="" className='own-damage-coverage' />
-                        <p>
+                        <p className="h-second-section-paragraph">
                             Medical treatments can be extremely expensive, especially for serious illnesses or emergencies. 
                             Health insurance helps cover these costs, ensuring that you don’t have to deplete your savings or
                              go into debt to pay for necessary medical care.
@@ -88,7 +98,7 @@ const TwoWheelerInsurance = () => {
                     <div className="coverage-card">
                         <h4>Access to Quality Healthcare</h4>
                         <img src={healthinsurance2} alt="" className='own-damage-coverage' />
-                        <p>
+                        <p className="h-second-section-paragraph">
                             With a health insurance policy, you have access to a network of hospitals, clinics, and specialists.
                              This ensures you receive timely and appropriate medical attention without worrying about the cost. 
                              Quality healthcare is crucial for maintaining and improving your health.
@@ -97,7 +107,7 @@ const TwoWheelerInsurance = () => {
                     <div className="coverage-card">
                         <h4>Peace of Mind</h4>
                         <img src={healthinsurance3} alt="" className='own-damage-coverage' />
-                        <p>
+                        <p className ="h-second-section-paragraph">
                             Knowing that you have a health insurance policy gives you peace of mind. In case of a medical emergency, 
                             you can focus on recovery rather than worrying about how to afford the treatment. This mental relief is invaluable
                             during stressful times.
@@ -106,21 +116,21 @@ const TwoWheelerInsurance = () => {
                     <div className="coverage-card">
                         <h4>Individuals</h4>
                         <img src={healthisnurance4} alt="" className='own-damage-coverage' />
-                        <p>
+                        <p className="h-second-section-paragraph">
                             Personalized Coverage Options.Financial Security and Peace of Mind Variety of Plans Portability.
                         </p>
                     </div>
                     <div className="coverage-card">
                         <h4>Family</h4>
-                        <img src={ZeroDepreciation} alt="" className='own-damage-coverage' />
-                        <p>
+                        <img src={family} alt="" className='own-damage-coverage' />
+                        <p className="h-second-section-paragraph">
                             Comprehensive Coverage for All Family Members Cost-Effective Simplified Management Unified Deductible Access to Comprehensive Benefits Peace of Mind Support for Chronic Conditions
                         </p>
                     </div>
                     <div className="coverage-card">
                         <h4>Senior Citizens</h4>
-                        <img src={ZeroDepreciation} alt="" className='own-damage-coverage' />
-                        <p>
+                        <img src={senior} alt="" className='own-damage-coverage' />
+                        <p className="h-second-section-paragraph">
                             Comprehensive Health Coverage Preventive Care and Screenings Coverage for Pre-existing Conditions Access to Specialized Care Home Healthcare Services Critical Illness Coverage
                         </p>
                     </div>
@@ -132,7 +142,7 @@ const TwoWheelerInsurance = () => {
                 <h2 className="coverage-title">Factors Determining the Premium of Coverages of Health Insurance</h2>
                 <div className="coverage-grid-section2">
                     {data.map((item, index) => (
-                        <div key={index} className="coverage-item">
+                        <div key={index} className="coverage-item-health">
                             <img src={item.image} alt={item.title} />
                             <div className="coverage-text">
                                 <h3>{item.title}</h3>

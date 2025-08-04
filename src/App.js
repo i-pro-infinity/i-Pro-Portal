@@ -13,11 +13,17 @@ import HealthInsurance from "./pages/healthinsurance/healthinsurance";
 import Underprocess from "./pages/underprocess/underprocess";
 import BeliefsSection from "./pages/ourbeliefs/beliefs";
 import DifferenceSection from "./pages/whyiproinfinity/whyiproinfinity";
+import TravelInsurance from "./pages/Travel/travel";
+import Corporate from "./pages/Corporate/Corporate";
+import Lifeinsurance from "./pages/LifeInsurance/lifeinsurance";
+import Homeinsurance from "./pages/Homeinsurance/homeinsurance"
+
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/landing-screen" element={<LandingScreen />} />
+        
         <Route path="/" element={<Bannerscreen />} />
         <Route path="/footer" element={<Footer />} />
         <Route path="/Aboutus" element={<AboutIPro />} />
@@ -32,7 +38,10 @@ function App() {
         <Route path="/under-process" element={<Underprocess />} />
         <Route path="/beliefs-section" element={<BeliefsSection />} />
         <Route path="/why-ipro-infinty" element={<DifferenceSection />} />
-        
+        <Route path="/travelinsurance" element={<TravelInsurance />} />
+        <Route path="/corporate" element={<Corporate />} />
+        <Route path="/lifeinsurance" element={<Lifeinsurance />} />
+        <Route path="/Homeisnurance" element={<Homeinsurance />} />
         
       </Routes>
     </Router>

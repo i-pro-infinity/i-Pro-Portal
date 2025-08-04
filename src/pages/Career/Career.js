@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../../components/Header/header';
 import careerimage from '../../assets/career-image.jpg';
+import Footer from "../../components/footer/footer";
 import './Career.css'
 
     const CareerPage = () => {
@@ -47,6 +48,7 @@ import './Career.css'
                         <button type="submit" className="submit-button">Submit</button>
                     </form>
                 </div>
+                <Footer />
             </div>
         );
     };

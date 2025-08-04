@@ -15,37 +15,90 @@
     background-color: #fff;
 }
 
-.twowheeler-image img {
+.commercial-image img {
 
     width: 650px;
     height: auto;
 }
 
-.twowheeler-description {
+.commercial-description {
     max-width: 600px;
     color: #1e1e1e;
 }
 
-.twowheeler-description h2 {
-    font-size: 24px;
+.comm-align{
+    text-align: justify;
+}
+.commercial-description h2 {
+    font-size: 22px;
     margin-bottom: 10px;
 }
 
-.twowheeler-description p {
+.commercial-description p {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 10px;
 }
 
-.quote-btn {
-    margin-top: 15px;
-    padding: 12px 25px;
-    background-color: #007bff;
+.quotes-btn-commercial {
+    padding: 10px 20px;
+    font-size: 14px;
+    align-items: center;
+    /* Responsive width */
+    max-width: 150px;
     color: #fff;
-    font-weight: bold;
-    border: none;
     border-radius: 25px;
-    cursor: pointer;
+    background-color: #007bff;
+    animation: blink 1.5s infinite;
+    /* Optional: Prevent it from being too wide */
+    margin: 15px auto 0 auto;
+    /* Center the button */
+    display: block;
+    justify-content: center;
+    /* Horizontally center */
+    align-items: center;
+    /* Vertically center */
+    text-align: center;
+    margin-left: -25%;
+    /* Required to make auto margins work */
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+.quotes-btn-commercial {
+            padding: 10px 20px;
+            font-size: 14px;
+            align-items: center;
+            /* Responsive width */
+            max-width: 150px;
+            color: #fff;
+            border-radius: 25px;
+            background-color: #007bff;
+            animation: blink 1.5s infinite;
+            /* Optional: Prevent it from being too wide */
+            margin: 15px auto 0 auto;
+            /* Center the button */
+            display: block;
+            justify-content: center;
+            /* Horizontally center */
+            align-items: center;
+            /* Vertically center */
+            text-align: center;
+            margin-left: 30%;
+            /* Required to make auto margins work */   }
 }
 
 .twowheeler-coverage-section {
@@ -103,7 +156,7 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .coverage-grid {
         grid-template-columns: 1fr;
         /* 1 card per row on mobile */
@@ -116,11 +169,15 @@
 
     .twowheeler-description {
         max-width: 100%;
+        text-align: justify;
     }
 
-    .twowheeler-image img {
-        width: 200px;
+    .commercial-image img {
+        width: 500px;
+        margin-left: 2%;
     }
+
+   
 }
 
 
@@ -171,7 +228,7 @@
     gap: 2rem;
 }
 
-.coverage-item {
+.coverage-item-car {
     display: flex;
     align-items: center;
     max-width: 500px;
@@ -182,7 +239,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.coverage-item img {
+.coverage-item-car img {
     width: 80px;
     height: auto;
     margin-right: 1rem;
@@ -198,19 +255,12 @@
     font-size: 0.9rem;
     margin: 0.5rem 0 0 0;
     color: #555;
+    text-align: justify;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .coverage-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .coverage-item img {
-        margin-bottom: 0.5rem;
-        margin-right: 0;
-    }
+  
 
     .coverage-text {
         text-align: left;
@@ -224,5 +274,97 @@
 
     .coverage-card {
         padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .twowheeler-hero {
+        flex-direction: column;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .commercial-image img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+    
+    .comm-align {
+        text-align: justify;  
+        font-size: 12px !important;
+     }
+    .twowheeler-description {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .twowheeler-description h2 {
+        font-size: 20px;
+    }
+
+    .twowheeler-description p {
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+    .quotes-btn-commercial {
+        padding: 10px 20px;
+        font-size: 14px;
+        margin-left: 25%;
+    }
+
+    .coverage-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .coverage-card {
+        padding: 15px;
+    }
+
+    .coverage-card h4 {
+        font-size: 16px;
+    }
+
+    .coverage-card p {
+        font-size: 13px;
+        text-align: justify;
+    }
+
+    .coverage-title {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .coverage-grid-section2 {
+        grid-template-columns: 1fr !important;
+        padding: 10px;
+    }
+
+        .coverage-item-car {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            margin-left: -5%;
+        }
+    
+        .coverage-item-car img {
+            width: 60px;
+            height: auto;
+    
+        }
+    .coverage-text h3 {
+        font-size: 14px;
+    }
+
+    .coverage-text p {
+        font-size: 13px;
+    }
+
+    .commercialbus-coverage {
+        max-width: 250px;
+        width: 100%;
     }
 }

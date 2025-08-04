@@ -58,11 +58,11 @@ function Carinformation() {
               <div className="car-information-firstpara" style={{ textAlign: "left" }}>
                   <h1 className='private-car-insurance-heading'>What is Private Cars Insurance?</h1>
                   <p className='private-car-paragraph'>
-                      Private car insurance is a type of motor insurance policy that <br></br>covers your personal car.
-                      This insurance policy will cover you <br></br>financially against the losses 
-                      that arise due to an accident,<br></br> natural calamity, theft, or fire. 
-                      A comprehensive car insurance <br></br> cover offers the highest level of financial security to your car by<br></br> covering 
-                      almost all types of damages that your car may sustain.
+                      Private car insurance is a type of motor insurance policy that covers <br></br> your personal car..
+                      This insurance   policy will cover you financially<br></br> against the losses 
+                      that arise due to  an accident,natural calamity,  theft, <br></br>  or fire. 
+                      A comprehensive car insurance cover offers the highest level  <br></br>financial security to your car by covering 
+                      almost all types of damages<br></br>  that your car may sustain.
                   </p>
               </div>
 
@@ -73,7 +73,7 @@ function Carinformation() {
                   href="https://uatweb.iproinfinity.com/carinsurance/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="blinking-button"
+                  className="quotes-btn-carinformation"
               >
                   Get Quote
               </a>
@@ -105,10 +105,10 @@ function Carinformation() {
           </div>
 
           <div className="coverage-container">
-              <h2 className="coverage-title">Coverages Of Two Wheeler Insurance</h2>
+              <h2 className="coverage-title">Coverages Of Four Wheeler Insurance</h2>
               <div className="coverage-grid-section2">
                   {data.map((item, index) => (
-                      <div key={index} className="coverage-item">
+                      <div key={index} className="coverage-item-car">
                           <img src={item.image} alt={item.title} />
                           <div className="coverage-text">
                               <h3>{item.title}</h3>

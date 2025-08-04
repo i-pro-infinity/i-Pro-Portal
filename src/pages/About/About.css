@@ -33,22 +33,31 @@
 
 /* Heading Styling */
 .about-ipro-heading,
-.suresh-heading,
+
 .padmanabh-heading {
     font-size: clamp(1.2rem, 3vw, 1.4rem);
     font-weight: bold;
     margin-bottom: 15px;
     color: #097ABF;
+    text-align: justify;
+    
 }
 
+.suresh-heading{
+    color: #097ABF;
+}
 /* Paragraph Styling */
-.about-ipro-para,
+
 .suresh-para,
 .padmanabh-para {
     font-size: clamp(1rem, 1.5vw, 1.1rem);
-    line-height: 1.6;
+    line-height: 1.4;
+    text-align: justify;
 }
 
+.about-ipro-para{
+    text-align: justify;
+}
 .about-ipro-img-container,
 .suresh-img-container,
 .padmanabh-img-container {
@@ -99,6 +108,7 @@
     .suresh-para,
     .padmanabh-para {
         font-size: 1.1rem;
+        text-align: justify;
     }
 }
 
@@ -159,6 +169,7 @@
 .umesh-para {
     font-size: clamp(1rem, 1.5vw, 1.1rem);
     line-height: 1.6;
+    text-align: justify;
 }
 
 /* Responsive Design */

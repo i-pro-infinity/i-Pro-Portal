@@ -72,7 +72,7 @@ const ContactUs = () => {
             <input type="tel" name="phone" placeholder="Please enter your ph no" value={formData.phone} onChange={handleChange} required />
 
             <label>Message</label>
-            <textarea name="message" placeholder="Your message..." value={formData.message} onChange={handleChange}></textarea>
+            <textarea className='textarea' name="message" placeholder="Your message..." value={formData.message} onChange={handleChange}></textarea>
 
             <button type="submit" className="send-button">Send message</button>
           </form>

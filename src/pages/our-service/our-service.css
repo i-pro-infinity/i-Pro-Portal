@@ -38,6 +38,7 @@ html {
     line-height: 1.6;
     margin: 0 auto;
     padding: 0 20px;
+    text-align: justify;
 }
 
 /* Business Philosophy Container */
@@ -66,12 +67,14 @@ html {
     font-weight: bold;
     margin-bottom: 15px;
     color: #097ABF;
+    text-align: justify;
 }
 
 /* List Styling */
 .business-philosophy-list {
     list-style-type: none;
     padding: 0;
+    text-align: justify;
 }
 
 .business-philosophy-list li {
@@ -181,6 +184,7 @@ html {
 .insurance-broker-para {
     font-size: clamp(1rem, 1.5vw, 1.1rem);
     line-height: 1.6;
+    text-align: justify;
 }
 
 /* Responsive Design */
@@ -212,6 +216,7 @@ html {
     .personal-insurance-para,
     .insurance-broker-para {
         font-size: 1.1rem;
+        text-align: justify;
     }
 }
 
@@ -241,12 +246,14 @@ html {
     font-weight: bold;
     margin-bottom: 15px;
     color: #097ABF;
+    text-align: justify;
 }
 
 /* Paragraph Styling */
 .corporate-insurance-para {
     font-size: clamp(1rem, 1.5vw, 1.1rem);
     line-height: 1.6;
+    text-align: justify;
 }
 
 .corporate-insurance-img-container {
@@ -280,6 +287,7 @@ html {
 
     .corporate-insurance-heading {
         font-size: 1.6rem;
+        text-align: justify;
     }
 
     .corporate-insurance-para {
@@ -337,6 +345,7 @@ html {
     font-size: 14px;
     color: #333;
     line-height: 1.5;
+    text-align: justify;
 }
 
 /* Responsive Design */
@@ -406,17 +415,21 @@ html {
     font-size: 14px;
     color: #333;
     line-height: 1.5;
+    text-align: justify;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
     .ipro-card {
-        width: 100%;
+        width: 90%;
     }
 }
 
 @media (max-width: 768px) {
     .ipro-text {
-        font-size: 13px;
+        font-size: 12px;
+        width: 310px;
+        text-align: justify;
+       
     }
 }

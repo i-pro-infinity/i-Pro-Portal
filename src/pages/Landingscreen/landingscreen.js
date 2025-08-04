@@ -117,8 +117,8 @@ function LandingScreen () {
                         <div className="info-icon"><FaInfoCircle /></div>
                         </div>
             </div>
-
-                    <div className="rectangle-box">
+<br></br>
+                    <div className="rectangle-box-corporatescreen">
                         <Link to="/under-process" className="link-no-style">
                         <img src={fLower} alt="decor" className="decor-icon" />
                         </Link>
@@ -132,6 +132,7 @@ function LandingScreen () {
             </div>    
                 
             </div>
+            <br></br>
             <Footer />
            
    </div>

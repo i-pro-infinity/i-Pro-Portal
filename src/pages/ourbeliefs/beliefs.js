@@ -40,10 +40,8 @@ const BeliefsSection = () => {
     ];
 
     return (
-        <section className="beliefs-section">
+        <div className="ourbelief-container">
         <Header/>
-            <h2>Our Beliefs</h2>
-
             <div className="vision-mission">
                 <div className="vision-mission-text">
                     <div className="vision">
@@ -61,7 +59,7 @@ const BeliefsSection = () => {
                     </div>
                 </div>
                 <div className="vision-mission-image">
-                    <img src={ourbeliefs} alt="Vision and Mission Image" />
+                    <img src={ourbeliefs} alt="Vision and Mission Image" className='vission-image' />
                 </div>
             </div>
 
@@ -80,7 +78,7 @@ const BeliefsSection = () => {
             <br></br>
             <br></br>
             <Footer/>
-        </section>
+        </div>
     );
 };
 

@@ -1,9 +1,8 @@
 .Landingscreen-container{
     max-width: 100%;
-    align-items: center;
-    max-width: 100%;
-    margin: auto;
-    padding: auto;
+        align-items: center;
+        margin: auto;
+        padding: 0;
 }
 
 
@@ -105,30 +104,16 @@
 
 
 
-@media (max-width: 320px) {
-.landingscreen-image {
-        max-width: 50%;
-        height: auto;
-        display: block;
-        justify-content: center;
-        align-items: center;
-
-        margin-top: -35.4%;
-        margin-left: -35%;
-
-    }
-}
 
 
-.landingscreen-grid{
+
+/* .landingscreen-grid{
     display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        /* 4 columns */
+        grid-template-columns: repeat(4, 1fr); 
         gap: 20px;
-        /* spacing between items */
         padding: 207.9px;
         margin-top: -208px;     
-}
+} */
 
 
 @media (max-width: 1024px) {
@@ -158,15 +143,7 @@
 
 
 
-@media (max-width: 375px) {
-    .landingscreen-grid {
-        display: flex;
-        position: absolute;
-        grid-template-columns: repeat(2, 1fr);
-        margin-top: 18px !important;
-        left: -90% !important;
-    }
-}
+
 @media (max-width: 1024px) {
     .landingscreen-grid {
         display: grid;
@@ -274,27 +251,7 @@
         }
 }
 
-@media (max-width: 375px) {
-.grid-box {
-        position: relative;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        width: 60px;
-        height: 60px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        font-size: 14px;
-        margin-left: -370%;
-        margin-top: -30%;
-        text-align: center;
-        transition: transform 0.3s ease, background-color 0.3s ease;
-    }
-    
-}
+
 .info-icon {
     position: absolute;
     top: 6px;
@@ -326,10 +283,7 @@
     cursor: pointer;
 }
 /* Hover effect */
-.grid-box:hover {
-    background-color: #fdc626;
-    cursor: pointer;
-}
+
 .icon-img{
     width:60px;
     height:60px;
@@ -355,7 +309,7 @@
     justify-items: center;
 }
 
-.rectangle-box {
+.rectangle-box-corporatescreen{
     background: linear-gradient(to right, #2980b9, #6dd5fa);
     color: white;
     padding: 15px 30px;
@@ -371,7 +325,7 @@
 
 
 @media (max-width: 1024px) {
-.rectangle-box {
+.rectangle-box-corporatescreen {
     background: linear-gradient(to right, #2980b9, #6dd5fa);
         color: white;
         padding: 15px 30px;
@@ -388,7 +342,7 @@
 }
 
 @media (max-width: 768px) {
-    .rectangle-box {
+    .rectangle-box-corporatescreen {
             background: linear-gradient(to right, #2980b9, #6dd5fa);
             color: white;
             padding: 15px 30px;
@@ -427,3 +381,63 @@ font-size: 14px;
 }
 
 
+@media (max-width: 480px) {
+    .Landingscreen-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .landing-screen-background {
+        width: 100%;
+        height: 170px;
+        background: linear-gradient(to bottom, #4297D8, #175A9E);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        z-index: 0;   
+    }
+    .landingscreen-image{
+        width: 400px;
+        display: flex;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: -49.7%;
+        margin-left: 5%;
+    }
+
+    .corporate-insurance-plan{
+        font-size: 12px;
+        white-space: nowrap;
+    }
+    .landingscreen-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin-top: 4%;
+        margin-left: -89%;
+        justify-content: center;
+            align-items: center;
+       
+    }
+
+        .rectangle-box-corporatescreen {
+            
+            background: linear-gradient(to right, #2980b9, #6dd5fa);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            margin-right: 88%;
+            width: 75%;
+            max-width: 280px !important;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);   }
+ 
+            .i-pro-heading{
+                
+                margin-top: -70%;
+                font-size: 12px;
+            }
+    
+}

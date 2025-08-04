@@ -4,6 +4,9 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .twowheeler-hero {
@@ -15,74 +18,112 @@
     background-color: #fff;
 }
 
+
+.twowheeler-grid-text{
+    text-align: justify;
+}
+.two-wheeler{
+    text-align: justify;
+}
+
 .twowheeler-image img {
-   
-    width: 650px;
-    height: auto;
+    display: flex;
+    white-space: nowrap;
+    justify-content: center;
+        flex-direction: column;
+        align-items: center;
 }
 
 
 
 @media (max-width: 1024px) {
     .twowheeler-image img {
-            width: 550px;
+            width: 550px !important;
             height: auto;
-            margin-left: -50%;
+            
         }
+
+        .scooter-image{
+            margin-left: -60%;
+            margin-top: 20%;
+        }
+
+                .quotes-btn-scooty {
+                    padding: 10px 20px;
+                    font-size: 14px;
+                    margin-right: 30%;
+                    width: 350px;
+                    margin-left: -5% !important;
+                }
 }
 
 @media (max-width: 768px) {
     .twowheeler-image img {
-            width: 450px !important;
+        width: 450px;
             height: auto;
-            margin-left: -50%;
+            margin-left: -45%;
+            margin-top: 15%;
         }
 }
-.twowheeler-description {
+.scooty-information-firstpara {
     max-width: 600px;
     color: #1e1e1e;
 }
 
 @media (max-width: 1024px) {
-    .twowheeler-description {
+    .scooty-information-firstpara {
             max-width: 500px;
             color: #1e1e1e;
             margin-left: 35%;
             margin-top: -30%;
         }
+
+               
 }
 
 @media (max-width: 768px) {
-    .twowheeler-description {
+    .scooty-information-firstpara {
         font-size: 18px !important;
     }
 }
 @media (max-width: 768px) {
-.two-wheeler-insurance{
+.private-scooty-insurance-heading{
  font-size: 18px;
+ margin-top: -20%;
 }
 }
-.twowheeler-description h2 {
+.scooty-information-firstpara h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-.twowheeler-description p {
+.scooty-information-firstpara p {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 10px;
 }
 
-.quote-btn {
-    margin-top: 15px;
-    padding: 12px 25px;
-    animation: blink 1.5s infinite;
-    background-color: #007bff;
-    color: #fff;
-    font-weight: bold;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
+.quotes-btn-scooty {
+    padding: 10px 20px;
+        font-size: 14px;
+        align-items: center;
+        /* Responsive width */
+        max-width: 150px;
+        color: #fff;
+        border-radius: 25px;
+        background-color: #007bff;
+        animation: blink 1.5s infinite;
+        /* Optional: Prevent it from being too wide */
+        margin: 15px auto 0 auto;
+        /* Center the button */
+        display: block;
+        justify-content: center;
+        /* Horizontally center */
+        align-items: center;
+        /* Vertically center */
+        text-align: center;
+        margin-left: -35%;
+        /* Required to make auto margins work */
 }
  @keyframes blink {
      0% {
@@ -152,32 +193,7 @@
 }
 
 /* Responsive Design */
-@media screen and (max-width: 900px) {
-    .coverage-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 cards per row on tablets */
-    }
-}
 
-@media screen and (max-width: 600px) {
-    .coverage-grid {
-        grid-template-columns: 1fr;
-        /* 1 card per row on mobile */
-    }
-
-    .twowheeler-hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .twowheeler-description {
-        max-width: 100%;
-    }
-
-    .twowheeler-image img {
-        width: 200px;
-    }
-}
 
 .coverage-container {
     padding: 2rem;
@@ -198,18 +214,18 @@
     gap: 2rem;
 }
 
-.coverage-item {
+.coverage-item-scooty {
     display: flex;
     align-items: center;
     max-width: 500px;
     width: 100%;
     background-color: #f9f9f9;
-    padding: 1rem;
+   
     border-radius: 12px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.coverage-item img {
+.coverage-item-scooty img {
     width: 80px;
     height: auto;
     margin-right: 1rem;
@@ -241,5 +257,127 @@
 
     .coverage-text {
         text-align: left;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .twowheeler-hero {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    .twowheeler-image img {
+        width: 100%;
+        max-width: 800px !important;
+        margin: 0 auto;
+        margin-left: -18% !important;
+    }
+
+
+
+    .scooter-image{
+        width: 100%;
+            max-width: 600px !important;
+            margin: 0 auto;
+            margin-left: -5% !important;
+    }
+    .scooty-information-firstpara {
+        max-width: 70%;
+        margin: 20px 0;
+        padding: 0 10px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .scooty-information-firstpara h2 {
+        font-size: 18px;
+        margin-left: -40%;
+    }
+
+    .scooty-information-firstpara p {
+        font-size: 12px;
+            line-height: 1.6;
+            width: 300px;
+            text-align: justify;
+            margin-left: -45%;
+
+    }
+
+        .private-scooty-insurance-heading {
+            font-size: 18px;
+            margin-top: 6%;      }
+    .private-scooty-paragraph{
+        margin-left: 20%;
+    }
+    .quotes-btn-scooty {
+        padding: 10px 20px;
+            font-size: 14px;
+            margin-right: 30%;
+            width: 350px;
+            margin-left: -30% !important;
+    }
+
+    .coverage-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+       
+    }
+
+    .scooter-image{
+        margin-left: -50% !important;
+    }
+    .coverage-card {
+        padding: 15px;
+    }
+
+    .coverage-card h4 {
+        font-size: 16px;
+    }
+
+    .coverage-card p {
+        font-size: 13px;
+        width: 80%;
+            /* or a fixed value like 300px */
+            text-align: justify;
+            text-justify: inter-word;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0 auto;
+    }
+
+    .coverage-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .coverage-grid-section2 {
+        grid-template-columns: 1fr !important;
+            padding: 10px;
+    }
+
+    .coverage-item {
+        width: 50% !important;
+            max-width: 150px;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            display: block;
+            margin-left: -10%;
+    }
+
+    .coverage-item img {
+        width: 80px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .coverage-text h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .coverage-text p {
+        font-size: 14px;
     }
 }

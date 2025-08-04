@@ -61,13 +61,13 @@ const CommercialVehicleInsurance = () => {
         <div className="twowheeler-container">
             <Header />
             <div className="twowheeler-hero">
-                <div className="twowheeler-image">
+                <div className="commercial-image">
                     <img src={commercialvehicle} alt="Scooter" />
                 </div>
-                <div className="twowheeler-description">
+                <div className="commercial-description">
                     <h2>Commercial Vehicle Insurance ?</h2>
                     
-                    <p>
+                    <p className='comm-align'>
                         Goods Carrying Vehicle Insurance is a specialized insurance policy designed to provide coverage
                         for vehicles that are used for transporting goods commercially. This type of insurance is particularly
                         important for businesses that rely on vehicles such as trucks, vans, and lorries to transport goods from
@@ -77,7 +77,16 @@ const CommercialVehicleInsurance = () => {
                         potential financial losses in case of unexpected events. This insurance policy is crucial for businesses in the
                         logistics and transportation industry to ensure the smooth and secure operation of their operation
                     </p>
-                    <button className="quote-btn">Get Quote</button>
+                    <div className="quote-container">
+                        <a
+                            href="https://uatweb.iproinfinity.com/commercial-vehicle-insurance/#/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="quotes-btn-commercial"
+                        >
+                            Get Quote
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -133,7 +142,7 @@ const CommercialVehicleInsurance = () => {
                 <h2 className="coverage-title">Factors Determining the Premium of Coverages of Commercial Vehicle Insurance</h2>
                 <div className="coverage-grid-section2">
                     {data.map((item, index) => (
-                        <div key={index} className="coverage-item">
+                        <div key={index} className="coverage-item-car">
                             <img src={item.image} alt={item.title} />
                             <div className="coverage-text">
                                 <h3>{item.title}</h3>
