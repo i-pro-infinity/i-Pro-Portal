@@ -79,7 +79,7 @@ const CommercialVehicleInsurance = () => {
                     </p>
                     <div className="quote-container">
                         <a
-                            href="https://uatweb.iproinfinity.com/commercial-vehicle-insurance/#/"
+                            href="https://web.iproinfinity.com/commercial-vehicle-insurance/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="quotes-btn-commercial"

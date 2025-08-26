@@ -51,7 +51,7 @@ const TwoWheelerInsurance = () => {
                     </p>
                     <div className="quote-container">
                                  <a
-                            href="https://uatweb.iproinfinity.com/bike-insurance/"
+                            href="https://web.iproinfinity.com/two-wheeler-insurance/"
                                      target="_blank"
                                      rel="noopener noreferrer"
                                      className="quotes-btn-scooty"

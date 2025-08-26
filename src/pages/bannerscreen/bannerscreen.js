@@ -150,7 +150,7 @@ function Bannerscreen() {
       <div className='bannerscreen-header'>
         <Header />
       </div>
-      <video
+      {/* <video
         className="background-video"
         autoPlay
         muted
@@ -167,7 +167,39 @@ function Bannerscreen() {
         <p className="subtext">The Foundation of Trust-Based Relationships</p>
       </div>
 
-      {/* <div className='hero-section-bannerscreen'>
+
+      
+
+      Achievements Section */}
+      {/* <div className="achievements-section">
+        <div className="achievement">
+          <span className="icon">
+            <h1>🏆 Best Insurance Provider</h1>
+          </span>
+          <p>Recognized for exceptional customer service and coverage</p>
+        </div>
+        <div className="achievement">
+          <span className="icon">📈</span>
+          <h3>10x Growth</h3>
+          <p>Rapid increase in client base and satisfaction</p>
+        </div>
+      </div> */}
+
+      {/* Products Section */}
+      {/* <div className="products-section">
+        <h2>Our Products</h2>
+        <div className="products-grid">
+          <div className="product-card">Two Wheeler Insurance</div>
+          <div className="product-card">Four Wheeler Insurance</div>
+          <div className="product-card">Commercial Vehicle Insurance</div>
+          <div className="product-card">Health Insurance</div>
+        </div>
+      </div> */}
+
+
+
+
+      <div className='hero-section-bannerscreen'>
         <div className='main-banner-container'>
           <div className='bannerscreen-headertext'>
             <h2 className='insurance-service-main-title'>Insurance Services you can always TRUST upon....</h2>
@@ -211,7 +243,7 @@ function Bannerscreen() {
               <div
                 className="grid-box"
                 onClick={() =>
-                  handleGridClick('4-wheeler', 'https://uatweb.iproinfinity.com/carinsurance/')
+                  handleGridClick('4-wheeler', 'https://web.iproinfinity.com/car-insurance/')
                 }
               >
                 <img src={bluecar} alt="4 wheeler" className="icon-img" />
@@ -220,21 +252,21 @@ function Bannerscreen() {
             </div>
 
             <div className="grid-wrapper">
-              <div className="grid-box" onClick={() => handleGridClick('4-wheeler', 'https://uatweb.iproinfinity.com/bike-insurance/')}>
+              <div className="grid-box" onClick={() => handleGridClick('4-wheeler', 'https://web.iproinfinity.com/two-wheeler-insurance/')}>
                 <img src={scooter} alt="2 wheeler" className="icon-img" />
                 <p className="grid-lable">Two Wheeler</p>
               </div>
             </div>
 
             <div className="grid-wrapper">
-              <div className="grid-box" onClick={() => handleGridClick('4-wheeler', 'https://uatweb.iproinfinity.com/commercial-vehicle-insurance/#/')}>
+              <div className="grid-box" onClick={() => handleGridClick('4-wheeler', 'https://web.iproinfinity.com/commercial-vehicle-insurance/')}>
                 <img src={commercial} alt="Commercial" className="icon-img" />
                 <p className="grid-lable">Commercial Vehicle</p>
               </div>
             </div>
 
             <div className="grid-wrapper">
-              <div className="grid-box" onClick={() => handleGridClick('4-wheeler', 'https://uatweb.iproinfinity.com/healthinsurance/')}>
+              <div className="grid-box" onClick={() => handleGridClick('4-wheeler', 'https://web.iproinfinity.com/health-insurance/')}>
                 <img src={handsonheart} alt="Health" className="icon-img" />
                 <p className="grid-lable">Health</p>
               </div>
@@ -311,7 +343,7 @@ function Bannerscreen() {
 
           </div>
         </div>
-      </div> */}
+      </div>
 
       <Footer />
     </div>

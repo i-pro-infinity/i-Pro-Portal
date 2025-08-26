@@ -11,7 +11,8 @@ import {
 } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../../assets/I-Pro-logo.png';
+import logo from '../../assets/logo-ipro.jpeg';
+import { useNavigate } from 'react-router-dom';
 import './header.css';
 
 const Header = () => {
@@ -27,6 +28,8 @@ const Header = () => {
 
     const handleOpen = setter => event => setter(event.currentTarget);
     const handleClose = setter => () => setter(null);
+    
+    const navigate = useNavigate();
 
     // 🔧 Dropdown menu style
     const menuPaperProps = {
@@ -46,7 +49,17 @@ const Header = () => {
             sx={{ backgroundColor: isMobile ? 'blue' : 'transparent', boxShadow: 'none' }}
         >
             <Toolbar className="toolbar">
-                <img src={logo} className="header-logo" alt="Logo" style={{ width: '160px', height: '120px', marginRight: '16px' }} />
+                <img
+                    src={logo}
+                    className="header-logo"
+                    alt="Logo"
+                    style={{
+                        width: '160px',      // fixed width
+                        height: '60px',      // fixed height to look good
+                        objectFit: 'contain', // ensures image scales properly
+                        marginRight: '16px'
+                    }}
+                />
 
                 <div className="menu-items">
                     {isMobile ? (
@@ -62,6 +75,11 @@ const Header = () => {
                                 transformOrigin={{ vertical: 'top', horizontal: 'right' }}
                                 PaperProps={menuPaperProps}
                             >
+                                {location.pathname !== "/" && (
+                                    <MenuItem onClick={() => { handleClose(setMenuAnchor)(); navigate("/"); }}>
+                                        <span className="menu-link">Home</span>
+                                    </MenuItem>
+                                )}
                                 <MenuItem onClick={handleClose(setMenuAnchor)}><Link to="/our-services" className="menu-link">Our Services</Link></MenuItem>
                                 <MenuItem onClick={handleClose(setMenuAnchor)}><Link to="/why-ipro-infinty" className="menu-link">Why I-Pro Infinity</Link></MenuItem>
                                 <MenuItem onClick={handleClose(setMenuAnchor)}><Link to="/Aboutus" className="menu-link">About Us</Link></MenuItem>
@@ -76,15 +94,24 @@ const Header = () => {
                                 <MenuItem onClick={handleClose(setMenuAnchor)}><Link to="/Homeisnurance" className="menu-link">Home Insurance</Link></MenuItem>
                                 <MenuItem onClick={handleClose(setMenuAnchor)}><Link to="/career" className="menu-link">Careers</Link></MenuItem>
                                 <MenuItem onClick={handleClose(setMenuAnchor)}>
-                                    <a href="https://uatweb.iproinfinity.com/pos/" className="menu-link" target="_blank" rel="noopener noreferrer">Partner Registration</a>
+                                    <a href="https://web.iproinfinity.com/pos/" className="menu-link" target="_blank" rel="noopener noreferrer">Partner Registration</a>
                                 </MenuItem>
                                 <MenuItem onClick={handleClose(setMenuAnchor)}>
-                                    <a href="https://uatweb.iproinfinity.com/login.php" className="menu-link" target="_blank" rel="noopener noreferrer">Partner Login</a>
+                                    <a href="https://web.iproinfinity.com/login.php" className="menu-link" target="_blank" rel="noopener noreferrer">Partner Login</a>
+                                </MenuItem>
+                                <MenuItem onClick={handleClose(setMenuAnchor)}>
+                                    <a href="https://web.iproinfinity.com/customer-profile/" className="menu-link" target="_blank" rel="noopener noreferrer">Customer Login</a>
                                 </MenuItem>
                             </Menu>
                         </>
                     ) : (
                         <>
+                                {/* Show Home in Desktop if not on home page */}
+                                {location.pathname !== "/" && (
+                                    <Button color="inherit" onClick={() => navigate("/")}>
+                                        <span className="nav-link">HOME</span>
+                                    </Button>
+                                )}
                             {/* What We Do */}
                             <Button color="inherit" onClick={handleOpen(setWhatWeDoAnchor)}>
                                 <span className="nav-link">WHAT WE DO</span>
@@ -119,21 +146,22 @@ const Header = () => {
                                 <span className="nav-link">ABOUT US</span>
                             </Button>
                                 <Menu
-                                    anchorEl={aboutUsAnchor}
-                                    open={Boolean(aboutUsAnchor)}
-                                    onClose={handleClose(setAboutUsAnchor)}
+                                    anchorEl={whatWeDoAnchor}
+                                    open={Boolean(whatWeDoAnchor)}
+                                    onClose={handleClose(setWhatWeDoAnchor)}
+                                    getContentAnchorEl={null}  // ⬅ Stop auto vertical adjustment
                                     anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
                                     transformOrigin={{ vertical: 'top', horizontal: 'left' }}
                                     PaperProps={{
                                         sx: {
-                                            height: '100px',
                                             minWidth: 200,
-                                            overflow: 'hidden',
+                                            overflow: 'visible',
                                             p: 0,
                                             boxShadow: 3,
                                         },
                                     }}
                                 >
+
                                     <MenuItem onClick={handleClose(setAboutUsAnchor)}>
                                         <Link to="/Aboutus" className="menu-link">About Us</Link>
                                     </MenuItem>
@@ -180,7 +208,7 @@ const Header = () => {
                                 transformOrigin={{ vertical: 'top', horizontal: 'left' }}
                                     PaperProps={{
                                         sx: {
-                                            height: '100px',
+                                            height: '130px',
                                             minWidth: 200,
                                             overflow: 'hidden',
                                             p: 0,
@@ -189,11 +217,14 @@ const Header = () => {
                                     }}
                             >
                                 <MenuItem onClick={handleClose(setPartnersAnchor)}>
-                                    <a href="https://uatweb.iproinfinity.com/pos/" className="menu-link" target="_blank" rel="noopener noreferrer">Partner Registration</a>
+                                        <a href="https://web.iproinfinity.com/pos/" className="menu-link" target="_blank" rel="noopener noreferrer">Partner Registration</a>
                                 </MenuItem>
                                 <MenuItem onClick={handleClose(setPartnersAnchor)}>
-                                    <a href="https://uatweb.iproinfinity.com/login.php" className="menu-link" target="_blank" rel="noopener noreferrer">Partner Login</a>
+                                        <a href="https://web.iproinfinity.com/login.php" className="menu-link" target="_blank" rel="noopener noreferrer">Partner Login</a>
                                 </MenuItem>
+                                    <MenuItem onClick={handleClose(setPartnersAnchor)}>
+                                        <a href="https://web.iproinfinity.com/customer-profile/" className="menu-link" target="_blank" rel="noopener noreferrer">Customer Login</a>
+                                    </MenuItem>
                             </Menu>
                         </>
                     )}

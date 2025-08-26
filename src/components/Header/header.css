@@ -1,5 +1,7 @@
 .app-bar {
-    background-color: white !important;
+    background-color: white
+     !important;
+     
     width: 100% !important;
     position: sticky !important;
     top: 0;

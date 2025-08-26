@@ -70,7 +70,7 @@ function Carinformation() {
 
           <div className="quote-container">
               <a
-                  href="https://uatweb.iproinfinity.com/carinsurance/"
+                  href="https://web.iproinfinity.com/car-insurance/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="quotes-btn-carinformation"
